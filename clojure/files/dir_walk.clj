@@ -2,6 +2,7 @@
 ; uses babashka clojure to run
 ; brew install borkdude/brew/babashka
 ; see https://github.com/borkdude/babashka
+; KEYS=[dir file_system walk iterate file]
 
 (defn get-files [dir]
   (file-seq (clojure.java.io/file "/tmp")))

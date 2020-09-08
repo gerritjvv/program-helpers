@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# KEYS=[git squash]
 
 # rebase branch
 # use rebase 3

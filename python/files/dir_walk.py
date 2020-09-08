@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# KEYS=[dir file_system walk iterate file]
 
 import os
 import sys

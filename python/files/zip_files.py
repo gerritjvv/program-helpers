@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# KEYS=[zip]
 
 import os, sys
 from typing import Any

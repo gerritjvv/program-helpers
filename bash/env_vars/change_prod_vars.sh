@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# KEYS=[bash prod variables]
 
 
 # take any var with a PROD prefix,
