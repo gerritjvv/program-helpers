@@ -22,5 +22,5 @@ if [ -z "${DB_HOST}" ]; then
   exit 1
  fi
 
-#ensures that the output is csv, and columns are properly marked with "" where required
-PGPASSWORD="${DB_PASSWORD}" psql -h "${DB_HOST}" -U"${DB_USER}" "${DB_NAME}" --csv -t
+#ensures that the output is csv, and columns are properly marked with "" where required -F prints headers
+PGPASSWORD="${DB_PASSWORD}" psql -h "${DB_HOST}" -U"${DB_USER}" "${DB_NAME}" --csv -F -t
