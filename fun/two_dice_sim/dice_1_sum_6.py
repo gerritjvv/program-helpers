@@ -5,7 +5,10 @@
 from random import choice
 
 
-def roll() -> bool:
+def roll1() -> bool:
+    return choice([1, 2, 3, 4, 5, 6])
+
+def roll2() -> bool:
     return choice([1, 2, 3, 4, 5, 6])
 
 
@@ -14,8 +17,8 @@ def experiment():
     wins = 0
 
     for _ in range(total):
-        a = roll()
-        b = roll()
+        a = roll1()
+        b = roll2()
         if a == 1 and a + b == 6:
             wins += 1
 
