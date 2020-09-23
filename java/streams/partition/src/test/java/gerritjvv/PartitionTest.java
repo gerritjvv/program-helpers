@@ -29,4 +29,31 @@ public class PartitionTest {
         assertEquals(partitions.get(1), Arrays.asList(21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40));
         assertEquals(partitions.get(2), Arrays.asList(41, 42, 43, 44, 45));
     }
+
+    @Test
+    public void testPartitionNull() {
+
+        List partitions = Partition.stream(null, 20).collect(Collectors.toList());
+
+        assertEquals(partitions.size(), 0);
+
+    }
+
+    @Test
+    public void testPartitionEmpty() {
+
+        List partitions = Partition.stream(Arrays.asList(), 20).collect(Collectors.toList());
+
+        assertEquals(partitions.size(), 0);
+
+    }
+
+    @Test
+    public void testPartitionNegativeLength() {
+
+        List partitions = Partition.stream(Arrays.asList(), -1).collect(Collectors.toList());
+
+        assertEquals(partitions.size(), 0);
+
+    }
 }

@@ -19,14 +19,23 @@ public class Partition {
 
 
     public static <T> Iterator<List<T>> iterator(Iterable<T> it, int length) {
+        if (it == null || length < 0)
+            return Stream.<List<T>>empty().iterator();
+
         return PartitionIterator.iterator(it.iterator(), length);
     }
 
     public static <T> Spliterator<List<T>> spliterator(Iterable<T> it, int length) {
+        if (it == null || length < 0)
+            return Stream.<List<T>>empty().spliterator();
+
         return PartitionIterator.spliterator(it.iterator(), length);
     }
 
     public static <T> Stream<List<T>> stream(Iterable<T> it, int length) {
+        if (it == null || length < 0)
+            return Stream.empty();
+
         return PartitionIterator.stream(it.iterator(), length);
     }
 
