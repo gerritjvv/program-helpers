@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # KEYS=[bash prod variables]
 
-
+# Usage: . ./build.sh config-prod # keep the extra .
 # take any var with a PROD prefix,
 # removes the prefix and export it
 # e.g PROD_DB=abc
@@ -12,3 +12,16 @@ config-prod () {
      eval "export $v"
     done
 }
+
+
+CMD="$1"
+shift
+
+case "$CMD" in
+  config-prod )
+    config-prod
+    ;;
+  * )
+    echo "$0 config-prod"
+    ;;
+esac
