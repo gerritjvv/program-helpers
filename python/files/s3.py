@@ -1,4 +1,6 @@
 # KEYS = [boto3 python s3 upload list ieterate file]
+from typing import IO
+
 import boto3
 
 
@@ -15,6 +17,7 @@ def list_s3_files(bucket: str):
     for obj in bucket.objects.all():
         yield obj.key
 
+
 # filtering is done on the server side and we don't have to download
 # all of the keys
 def list_s3_files_filter(bucket: str, prefix: str):
@@ -29,6 +32,13 @@ def list_s3_files_filter(bucket: str, prefix: str):
             kwargs['ContinuationToken'] = resp['NextContinuationToken']
         except KeyError:
             break
+
+
+def open_s3_file(region, bucket_name: str, file_name: str) -> IO:
+    s3 = boto3.resource("s3", region_name=region)
+    obj = s3.Object(bucket_name=bucket_name, key=file_name)
+
+    return obj.get()['Body']
 
 
 for key in list_s3_files('mybucket'):
