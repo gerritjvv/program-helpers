@@ -3,6 +3,12 @@
 # pip3 install numpy
 # pip3 install scipy
 
+# Uses http://www.portaudio.com/ which is a
+# portable c library for audio recording
+# PortAudio provides samples in raw PCM format. That means each sample is an amplitude to be given to the DAC (digital-to-analog converter) in your sound card.
+# For paFloat32, this is a floating-point value from -1.0 to 1.0
+# The sound card converts this values to a proportional voltage that then drives your audio equipment
+
 import sounddevice as sd
 import numpy as np
 

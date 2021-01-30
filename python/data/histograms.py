@@ -12,5 +12,5 @@ with open(file, 'rb') as io:
     # take a shape of (rows, columns)
     # and make 1 row and N columns appending each row's columns
     x_hist = np.squeeze(x.reshape(1,-1))
-    plt.hist(x, bins=50)
+    plt.hist(x, bins=1000)
     plt.show()
