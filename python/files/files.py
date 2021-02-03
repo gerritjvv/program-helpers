@@ -14,3 +14,7 @@ def current_file() -> str:
     filename = frame[0].f_code.co_filename
 
     return os.path.abspath(filename)
+
+
+def current_dir() -> str:
+    return os.path.dirname(current_file())

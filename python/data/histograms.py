@@ -17,6 +17,8 @@ with open(file, 'rb') as io:
 
     bins = 100
 
+    print(f"mean {x_hist.mean()} variance {x_hist.var()} min {x_hist.min()} max {x_hist.max()}")
+
     plot1 = plt.figure(1)
     # histogram
     plt.hist(x_hist, bins=bins)
