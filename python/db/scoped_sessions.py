@@ -41,7 +41,7 @@ def app():
     async def print_on_response(request, response):
         request.ctx.session.commit()
         request.ctx.session.close()
-        # must call remove to remove the scoped session from the global scope dictionary
+        # must call remove to remove the scoped session from the global scope dictionary dictionary
         # see: https://docs.sqlalchemy.org/en/13/orm/contextual.html
         request.ctx.session.remove()
 
