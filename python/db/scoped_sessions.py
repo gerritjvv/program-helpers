@@ -1,3 +1,5 @@
+# KEYS=[python postgres sqlalchemy session scoped]
+
 __all__ = ["app"]
 
 ## see: https://docs.sqlalchemy.org/en/13/orm/session_basics.html
