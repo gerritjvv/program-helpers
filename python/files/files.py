@@ -1,5 +1,7 @@
 import inspect
 import os
+
+
 # KEYS=[python current file]
 
 
@@ -18,3 +20,8 @@ def current_file() -> str:
 
 def current_dir() -> str:
     return os.path.dirname(current_file())
+
+
+def file_name(f: str) -> str:
+    from pathlib import Path
+    return Path(f).stem
