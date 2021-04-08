@@ -3,3 +3,7 @@
 Convert from and from DataFrames.
 
 https://github.com/dmitrykoval/vinum
+
+Full OLAP DB:
+
+https://duckdb.org/docs/installation
