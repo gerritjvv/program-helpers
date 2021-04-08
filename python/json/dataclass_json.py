@@ -12,9 +12,6 @@ class JSON:
     def json(self):
         return json_encode(self)
 
-    def signature_json(self):
-        return self.json()
-
     @classmethod
     def from_json(cls, data):
         return cls.from_dict(jsonpickle.decode(data))
