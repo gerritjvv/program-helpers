@@ -11,8 +11,10 @@ def format(d: datetime) -> str:
 
 print(format(datetime.utcnow()))
 
+
 def parse_date(d: str) -> datetime:
     return dateutil.parser.parse(d)
+
 
 parse_date('2021-04-01')
 # datetime.datetime(2021, 4, 1, 0, 0)
