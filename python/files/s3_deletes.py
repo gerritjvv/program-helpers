@@ -12,6 +12,7 @@ It can be easily adapted to different partition strategies e.g
 
 <table>/date=<year>-<month>-<day>  etc.
 
+Please note that if you need to cleanout data automatically from a bucket, bucket lifecycle policies work better.
 """
 from datetime import datetime, timedelta
 from typing import List
