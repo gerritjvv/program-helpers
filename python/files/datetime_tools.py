@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # KEYS=[python datetime format parse]
 
+# install python-dateutil
 from datetime import datetime
 import dateutil.parser
 
