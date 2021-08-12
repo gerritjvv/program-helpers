@@ -4,6 +4,12 @@ from typing import IO
 import boto3
 
 
+def write_to_s3(value:str, bucket:str, key:str):
+    s3 = boto3.resource('s3')
+    s3.Object(bucket, key).put(Body=value)
+
+
+
 def upload_to_s3(file: str, bucket: str, key: str):
     s3_client = boto3.client('s3')
 

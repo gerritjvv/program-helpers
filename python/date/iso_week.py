@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# KEY = [python datetime range daterange week iso month]
+
 import enum
 import datetime
 import calendar
@@ -6,6 +9,10 @@ from typing import Tuple
 
 class Week(enum.Enum):
     MONDAY = 1
+
+
+def week_of_year(d: datetime.datetime) -> int:
+    return int(d.strftime("%W"))
 
 
 def iso_week_start_end_dates(year, week, week_start=Week.MONDAY) -> Tuple[datetime.datetime, datetime.datetime]:
